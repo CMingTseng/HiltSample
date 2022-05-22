@@ -8,11 +8,17 @@ import com.kapri.hiltapplication.utils.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+//import dagger.hilt.android.components.ApplicationComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
-@InstallIn(ApplicationComponent::class)
+//@InstallIn(ApplicationComponent::class)
+//https://stackoverflow.com/questions/65988186/error-cannot-find-symbol-dagger-hilt-installinvalue-applicationcomponent-c
+//ApplicationComponent is Deprecated in Dagger Version 2.30
+//ApplicationComponent removed in Dagger Version 2.31
+//Alternatively SingletonComponent should be used instead of ApplicationComponent
+@InstallIn(SingletonComponent::class)
 @Module
 object DatabaseModule {
 

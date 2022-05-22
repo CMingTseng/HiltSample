@@ -6,8 +6,8 @@ import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
-@JsonClass(generateAdapter = true)
 @Entity(tableName = "tblCountry")
+//@JsonClass(generateAdapter = true)
 data class Country(
     @PrimaryKey
     @field:Json(name = "name") @ColumnInfo(name = "name")
