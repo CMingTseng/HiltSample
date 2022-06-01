@@ -7,7 +7,8 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @Entity(tableName = "tblCountry")
-//@JsonClass(generateAdapter = true)
+//Ref : https://www.zacsweers.dev/a-closer-look-at-moshi-1-9/
+@JsonClass(generateAdapter = true)
 data class Country(
     @PrimaryKey
     @field:Json(name = "name") @ColumnInfo(name = "name")
