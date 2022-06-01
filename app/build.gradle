@@ -13,10 +13,11 @@ android {
     }
     defaultConfig {
         applicationId "com.kapri.hiltapplication"
-        minSdkVersion 23
+        minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments += [
@@ -72,6 +73,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine"
     // Android
+    implementation "androidx.multidex:multidex:2.0.1"
     implementation "androidx.core:core-ktx:$ktx"
     implementation "androidx.appcompat:appcompat:$appcompat"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayout"
